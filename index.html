@@ -1,29 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library of Congress</title>
-</head>
-<body>
-    <main>
-        <form action="">
-            <h1>Library of Congress Search Wizard</h1>
-            <input placeholder="Search" type="text">
-            <select palceholder="Select a format..." name="format" id="format-dropdown">
-                <option value="maps"></option>
-                <option value="audio"></option>
-                <option value="photos"></option>
-                <option value="manuscripts"></option>
-                <option value="newspapers"></option>
-                <option value="film-&-videos"></option>
-                <option value="notated-music"></option>
-                <option value="websites"></option>
-            </select>
+<html class="h-100" lang="en">
 
-        </form>
-    </main>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library of Congress</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+</head>
+
+<body class="h-100">
     
+        <main class="jumbotron d-flex align-items-center justify-content-center bg-dark">
+            <form action="" class="d-flex flex-column p-3">
+                <h1>Library of Congress Search Wizard</h1>
+                <input placeholder="Search" type="text" class="m-1" />
+                <select palceholder="Select a format..." name="format" id="format-dropdown" class="m-1">
+                    <option disabled selected value>-- select an option --</option>
+                    <option value="maps">Maps</option>
+                    <option value="audio">Audio</option>
+                    <option value="photos">Photos</option>
+                    <option value="manuscripts">Manuscripts</option>
+                    <option value="newspapers">Newspapers</option>
+                    <option value="film-&-videos">Film & Video</option>
+                    <option value="notated-music">Noatated Music</option>
+                    <option value="websites">Websites</option>
+                </select>
+            </form>
+        </main>
+   
 </body>
+
 </html>
