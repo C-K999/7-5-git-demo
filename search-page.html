@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+</head>
+
+<body class="cl-md-4">
+    <header>
+        <h1 class="">Displaying results: <span id="repo-name"></span></h1>
+        
+    </header>
+
+    <table class="table">
+        <thead>
+          <td>
+            <tr scope="row"></th>
+            <tr scope="row">Date: </th>
+            <tr scope="row">Subject: </th>
+          <td>
+        </thead>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        var searchLOV = function(stuff) {
+          var queryURL = "https://www.loc.gov/search" + stuff + "fo=json";
+          $.ajax({
+            url: queryURL,
+            method: "GET"
+          }).then(function(response) {
+            createRow(response);
+          });
+        };
+
+        var pumpData = function(data) {
+
+          var pRow = $("<tr>");
+    
+          var titlePd = $("<td>").text(data.Title);
+          var datePd = $("<td>").text(data.Date);
+          var subjectPd = $("<td>").text(data.Subjects);
+            
+          pRow.append(titlePd, datePd, subjectPd);
+
+          $("tbody").append(pRow);
+        };
+
+        searchLOV("George");
+    </script>
+
+    <script src="./assets/js/search.js"></script>
+
+</body>
